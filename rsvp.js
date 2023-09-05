@@ -20,7 +20,7 @@ lightbox.option({
 });
 document.addEventListener('DOMContentLoaded', function () {
     var http = new XMLHttpRequest();
-    http.open("GET", "http://75.101.194.254/onload?reload=sukses", true);
+    http.open("GET", "https://mycloud.devazy.iotflows.com/onload?reload=sukses", true);
     http.send();
     http.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -85,7 +85,7 @@ $(document).ready(function () {
                 btn.html('Kirim');
             }, 3000);
             var http = new XMLHttpRequest();
-            http.open("GET", "http://75.101.194.254/button?nama=" + $('#guest_name').val() + "&pesan=" + $('#message').val(), true);
+            http.open("GET", "https://mycloud.devazy.iotflows.com/button?nama=" + $('#guest_name').val() + "&pesan=" + $('#message').val(), true);
             http.send();
             $("#message_list").prepend('<li>\n' +
                 '                        <span class="from">' + $('#guest_name').val() + '</span>\n' +
