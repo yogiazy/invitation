@@ -172,7 +172,7 @@
                         <div>
                             <small class="d-block">Kepada Yth.</small>
                             <small class="d-block">Bpk/Ibu/Saudara/i</small>
-                                                        <h5>Romeo &amp; Juliet</h5>
+                                                        <h5 id="untuk">Romeo &amp; Juliet</h5>
                                                         <small>di Tempat</small>
                         </div>
                     </div>
@@ -898,6 +898,24 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, fugiat harum in
     <script src="https://kadio.id/js/splide.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <script src="https://kadio.id/js/rsvp.js?v3"></script>
+    <script>
+        function ambilNamaDariURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const nama = urlParams.get("untuk");
+            return nama;
+        }
+
+        // Fungsi untuk mengganti teks berdasarkan parameter "nama"
+        function gantiTeks() {
+            const nama = ambilNamaDariURL();
+            if (nama) {
+                document.getElementById("nama").textContent = nama;
+            }
+        }
+
+        // Panggil fungsi gantiTeks saat halaman dimuat
+        window.addEventListener("load", gantiTeks);
+    </script>
     <script>
         lightbox.option({
         'resizeDuration': 200,
